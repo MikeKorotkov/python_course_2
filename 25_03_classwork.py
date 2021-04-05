@@ -138,9 +138,9 @@
 
 #######################################
 
-# lst = ['', 'sdfdfdsdfsdf', '213hbnmc,s','', 1234]
-#
-# for item in lst:
-#     if item == '':
-#         lst.remove(item)
-# print(lst)
+lst = ['', 'sdfdfdsdfsdf', '213hbnmc,s','', 1234]
+
+for item in lst:
+    if item == '':
+        lst.pop(item)
+print(lst)
