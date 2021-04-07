@@ -19,14 +19,16 @@
 #             target.health -= 20
 #             if target1 == warrior1:
 #                 target1 = "Warrior1"
+#                 print(target1, " has attacked")
+#                 print("Warrior2 has", target.health, "hp left")
 #
 #             if target1 == warrior2:
+#                 target = warrior1
 #                 target1 = "Warrior2"
-#             print(target1, " has attacked")
-#             print(target, 'has', target.health, "hp left")
+#                 print(target1, " has attacked")
+#                 print('Warrior1 has', target.health, "hp left")
 #         if target.health == 0:
-#             print(target1, " has won")
-#
+#             print(target1, " has won!")
 #
 #
 # warrior1 = Warrior(100)
@@ -39,21 +41,11 @@
 #         num = randint(1, 2)
 #         if num == 1:
 #             warrior1.hit(warrior2, warrior1)
-#             exiter = input('Press "Enter" to start a fight or type "quit" to exit: ')
+#             exiter = input('Press "Enter" to continue or type "quit" if someone has won: ')
+#
 #         elif num == 2:
 #             warrior2.hit(warrior1, warrior2)
-#             exiter = input('Press "Enter" to start a fight or type "quit" to exit: ')
-
-# while True:
-#     randint(1, 2)
-#     if randint(1, 2) == 1:
-#         print('Warrior 1 attacked,Warrior 2 has', w2.defend(), 'hp left')
-#     else:
-#         print('Warrior 2 attacked,Warrior 1 has', w1.defend(), 'hp left')
-#
-#     if w1.hp == 0 or w2.hp == 0:
-#         break
-
+#             exiter = input('Press "Enter" to continue or type "quit" if someone has won: ')
 
 # 1. Создать рабочего. У который может ходить на работу.
 # Рабочий должен иметь возраст и имя.
