@@ -7,45 +7,51 @@
 # заканчивается ресурс здоровья, программа завершается сообщением о
 # том, кто одержал победу.
 
-# from random import randint
-#
-#
-# class Warrior:
-#     def __init__(self, health):
-#         self.health = health
-#
-#     def hit(self, target, target1):
-#         if target.health > 0:
-#             target.health -= 20
-#             if target1 == warrior1:
-#                 target1 = "Warrior1"
-#                 print(target1, " has attacked")
-#                 print("Warrior2 has", target.health, "hp left")
-#
-#             if target1 == warrior2:
-#                 target = warrior1
-#                 target1 = "Warrior2"
-#                 print(target1, " has attacked")
-#                 print('Warrior1 has', target.health, "hp left")
-#         if target.health == 0:
-#             print(target1, " has won!")
-#
-#
-# warrior1 = Warrior(100)
-# warrior2 = Warrior(100)
-#
-# exiter = input('Press "Enter" to start a fight or type "quit" to exit: ')
-#
-# while exiter != 'quit':
-#     if exiter == '':
-#         num = randint(1, 2)
-#         if num == 1:
-#             warrior1.hit(warrior2, warrior1)
-#             exiter = input('Press "Enter" to continue or type "quit" if someone has won: ')
-#
-#         elif num == 2:
-#             warrior2.hit(warrior1, warrior2)
-#             exiter = input('Press "Enter" to continue or type "quit" if someone has won: ')
+from random import randint
+
+
+class Warrior:
+    def __init__(self, health):
+        self.health = health
+
+    def hit(self, target, target1):
+        if target.health > 0:
+            target.health -= 20
+            if target1 == warrior1:
+                target1 = "Warrior1"
+                print(target1, " has attacked")
+                print("Warrior2 has", target.health, "hp left")
+
+            if target1 == warrior2:
+                target = warrior1
+                target1 = "Warrior2"
+                print(target1, " has attacked")
+                print('Warrior1 has', target.health, "hp left")
+        if target.health == 0:
+            print(target1, " has won!")
+
+
+warrior1 = Warrior(100)
+warrior2 = Warrior(100)
+
+exiter = input('Press "Enter" to start a fight or type "quit" to exit: ')
+
+while exiter != 'quit':
+    if exiter == '':
+        num = randint(1, 2)
+        if num == 1:
+            warrior1.hit(warrior2, warrior1)
+
+
+        elif num == 2:
+            warrior2.hit(warrior1, warrior2)
+
+
+    if warrior1.health == 0:
+        exiter = 'quit'
+
+    elif warrior2.health == 0:
+        exiter = 'quit'
 
 # 1. Создать рабочего. У который может ходить на работу.
 # Рабочий должен иметь возраст и имя.
