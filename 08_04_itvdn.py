@@ -111,11 +111,15 @@ class Worker:
 
 
 while True:
-    w1 = Worker()
-    w1.entering()
-    w2 = Worker()
-    w2.entering()
-    w3 = Worker()
-    w3.entering()
-    output_worker()
-    print()
+    try:
+        w1 = Worker()
+        w1.entering()
+        w2 = Worker()
+        w2.entering()
+        w3 = Worker()
+        w3.entering()
+    except (ValueError,NameError):
+        print('Field is empty!')
+    else:
+        output_worker()
+        print()
