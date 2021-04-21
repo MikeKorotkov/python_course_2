@@ -46,7 +46,6 @@ while exiter != 'quit':
         elif num == 2:
             warrior2.hit(warrior1, warrior2)
 
-
     if warrior1.health == 0:
         exiter = 'quit'
 
